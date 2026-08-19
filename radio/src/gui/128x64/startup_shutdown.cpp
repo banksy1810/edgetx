@@ -141,7 +141,7 @@ void drawShutdownAnimation(uint32_t duration, uint32_t totalDuration,
   if (message) {
     lcdDrawText((LCD_W - getTextWidth(message)) / 2, LCD_H-2*FH, message);
   }
-
+lcdDraw1bitBitmap((LCD_W - SLEEP_BITMAP_WIDTH) / 2, (LCD_H - SLEEP_BITMAP_HEIGHT) / 2, bmp_sleep, 0);
   lcdRefresh();
   lcdRefreshWait();
 }
